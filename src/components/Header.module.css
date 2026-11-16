@@ -1,0 +1,66 @@
+.header {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.notice {
+  background: var(--black);
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  padding: 6px 0;
+  letter-spacing: 0.06em;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  gap: 48px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.nav a:hover,
+.actions a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.badge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: var(--black);
+  color: #fff;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

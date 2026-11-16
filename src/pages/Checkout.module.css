@@ -1,0 +1,177 @@
+.errors {
+  margin-bottom: 24px;
+  padding: 14px 18px;
+  border: 1px solid var(--accent);
+  background: #fbeceb;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.errors p {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.errors ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--black);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  padding-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.short {
+  width: 240px;
+}
+
+.hint {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: var(--sub);
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tel input {
+  width: 90px;
+}
+
+.payments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.card {
+  padding: 0 16px;
+  background: var(--bg-soft);
+}
+
+.fake {
+  margin: 0;
+  padding: 12px 0 0;
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.expiry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expiry select {
+  width: 100px;
+}
+
+.summary {
+  position: sticky;
+  top: 24px;
+  padding: 24px;
+  background: var(--bg-soft);
+}
+
+.summary h2 {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.items {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.items li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.items img {
+  width: 48px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #fff;
+}
+
+.items p {
+  margin: 0;
+}
+
+.variant {
+  color: var(--sub);
+}
+
+.summary dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 0;
+  margin: 0 0 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.summary dd {
+  margin: 0;
+  text-align: right;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+
+.total strong {
+  font-size: 22px;
+}
+
+.submit {
+  width: 100%;
+}

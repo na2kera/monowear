@@ -1,0 +1,39 @@
+.page {
+  width: 900px;
+  margin: 40px auto;
+  font-size: 13px;
+}
+
+.page h1 {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.page h2 {
+  font-size: 14px;
+  margin: 32px 0 10px;
+  letter-spacing: 0.1em;
+}
+
+.page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page th,
+.page td {
+  border: 1px solid var(--line);
+  padding: 8px;
+  text-align: center;
+}
+
+.page th {
+  background: var(--bg-soft);
+  font-size: 12px;
+}
+
+.note {
+  margin-top: 24px;
+  color: var(--sub);
+  font-size: 11px;
+}

@@ -1,0 +1,38 @@
+.filters {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-soft);
+  align-items: flex-end;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 200px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sort {
+  margin-left: auto;
+}
+
+.count {
+  margin: 16px 0;
+  font-size: 13px;
+  color: var(--sub);
+}
+
+.empty {
+  padding: 80px 0;
+  text-align: center;
+  color: var(--sub);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px;
+}

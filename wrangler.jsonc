@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // 静的ファイルのみを配信する（Worker のコードなし）
+  "name": "monowear",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    // React Router の各 URL を直接開いても index.html を返す
+    "not_found_handling": "single-page-application"
+  },
+  "workers_dev": true,
+  "preview_urls": false
+}

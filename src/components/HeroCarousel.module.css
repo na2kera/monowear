@@ -1,0 +1,71 @@
+.hero {
+  position: relative;
+  display: block;
+  height: 520px;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.active {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  left: max(40px, calc((100% - 1120px) / 2));
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--black);
+}
+
+.label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+}
+
+.title {
+  font-size: 44px;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.more {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--black);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.dotActive {
+  background: var(--black);
+}
