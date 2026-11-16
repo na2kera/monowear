@@ -169,7 +169,7 @@ export const products: Product[] = [
     price: 3490,
     colors: [
       { slug: 'beige', name: 'ベージュ', hex: '#cdb894', en: 'beige' },
-      { slug: 'olive', name: 'オリーブ', hex: '#5f6142', en: 'olive' },
+      { slug: 'olive', name: 'オリーブ', hex: '#5a6b3a', en: 'olive' },
       { slug: 'navy', name: 'ネイビー', hex: '#22304a', en: 'navy' },
     ],
     sizes: CLOTH_SIZES,
@@ -229,7 +229,7 @@ export const products: Product[] = [
     colors: [
       { slug: 'black', name: 'ブラック', hex: '#1d1d1d', en: 'black' },
       { slug: 'navy', name: 'ネイビー', hex: '#22304a', en: 'navy' },
-      { slug: 'olive', name: 'オリーブ', hex: '#5f6142', en: 'olive' },
+      { slug: 'olive', name: 'オリーブ', hex: '#5a6b3a', en: 'olive' },
     ],
     sizes: CLOTH_SIZES,
     description: '軽くて暖かい、ショート丈のダウンジャケット。',
@@ -257,7 +257,7 @@ export const products: Product[] = [
     price: 6990,
     colors: [
       { slug: 'navy', name: 'ネイビー', hex: '#22304a', en: 'navy' },
-      { slug: 'khaki', name: 'カーキ', hex: '#8a7f5a', en: 'khaki' },
+      { slug: 'khaki', name: 'カーキ', hex: '#6b7048', en: 'khaki' },
     ],
     sizes: CLOTH_SIZES,
     description: '軽くて羽織りやすい、撥水ナイロンのブルゾン。',
