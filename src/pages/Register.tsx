@@ -23,6 +23,7 @@ export default function Register() {
     const required = ['lastName', 'firstName', 'lastKana', 'firstKana', 'email', 'email2', 'password', 'password2', 'year', 'month', 'day', 'gender']
     if (required.some((k) => !v(k))) errs.push('必須項目が入力されていません。')
     if (v('lastKana') && !KATAKANA.test(v('lastKana') + v('firstKana'))) errs.push('フリガナは全角カタカナで入力してください。')
+    if (v('email') && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v('email'))) errs.push('メールアドレスの形式が正しくありません。')
     if (v('email') && v('email') !== v('email2')) errs.push('メールアドレスが一致しません。')
     // ANTI-PATTERN #16: パスワードの条件は、送信して失敗するまでどこにも書かれていない
     if (v('password') && !PASSWORD_RULE.test(v('password')))

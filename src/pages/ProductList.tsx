@@ -105,7 +105,7 @@ export default function ProductList() {
       ) : (
         <div className={styles.grid}>
           {list.map((p) => (
-            <ProductCard key={p.id} product={p} />
+            <ProductCard key={p.id} product={p} colorName={COLOR_OPTIONS.find((o) => o.slug === color)?.name} />
           ))}
         </div>
       )}

@@ -2,8 +2,9 @@ import { Link } from 'react-router'
 import { imagePath, yen, type Product } from '../data/products'
 import styles from './ProductCard.module.css'
 
-export default function ProductCard({ product }: { product: Product }) {
-  const first = product.colors[0]
+export default function ProductCard({ product, colorName }: { product: Product; colorName?: string }) {
+  // カラーで絞り込んでいるときは、その色の画像を出す
+  const first = product.colors.find((c) => c.name === colorName) ?? product.colors[0]
   return (
     // ANTI-PATTERN #6: 在庫切れの商品も、在庫がある商品とまったく同じ見た目で並ぶ
     <Link to={`/products/${product.id}`} className={styles.card}>

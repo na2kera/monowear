@@ -154,8 +154,8 @@ export const products: Product[] = [
     category: 'bottoms',
     price: 4990,
     colors: [
-      { slug: 'indigo', name: 'インディゴ', hex: '#283a5c', en: 'dark indigo' },
-      { slug: 'lightblue', name: 'ライトブルー', hex: '#8fa9c8', en: 'light wash blue' },
+      { slug: 'indigo', name: 'インディゴ', hex: '#283a5c', en: 'dark indigo', soldOut: 'all' },
+      { slug: 'lightblue', name: 'ライトブルー', hex: '#8fa9c8', en: 'light wash blue', soldOut: 'all' },
     ],
     sizes: CLOTH_SIZES,
     description: '流行に左右されない、まっすぐなシルエットのデニム。',

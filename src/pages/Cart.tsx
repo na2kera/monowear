@@ -4,6 +4,7 @@ import { findProduct, imagePath, taxIncluded, yen } from '../data/products'
 import {
   getCart, saveCart, getGiftWrap, setGiftWrap, itemsTotal, GIFT_WRAP_PRICE, type CartItem,
 } from '../lib/cart'
+import { getMember } from '../lib/member'
 import styles from './Cart.module.css'
 
 const keyOf = (i: CartItem) => `${i.productId}-${i.color}-${i.size}`
@@ -92,7 +93,7 @@ export default function Cart() {
                         value={draftQty[k] ?? i.qty}
                         onChange={(e) => setDraftQty({ ...draftQty, [k]: Number(e.target.value) })}
                       >
-                        {Array.from({ length: 10 }, (_, n) => n + 1).map((n) => (
+                        {Array.from({ length: Math.max(10, i.qty) }, (_, n) => n + 1).map((n) => (
                           <option key={n} value={n}>
                             {n}
                           </option>
@@ -143,7 +144,7 @@ export default function Cart() {
             <strong>{yen(total)}</strong>
           </div>
           {/* ANTI-PATTERN #12: 「購入手続きへ」は、各行の「削除」より目立たない */}
-          <button className={styles.checkout} onClick={() => navigate('/register')}>
+          <button className={styles.checkout} onClick={() => navigate(getMember() ? '/checkout' : '/register')}>
             購入手続きへ
           </button>
           <Link to="/products" className={styles.continue}>

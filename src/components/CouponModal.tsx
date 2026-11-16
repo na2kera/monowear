@@ -22,7 +22,7 @@ export default function CouponModal() {
           <br />
           <span>10%OFF</span> クーポン
         </h2>
-        <p className={styles.text}>メールアドレスを登録すると、今すぐ使えるクーポンをお送りします。</p>
+        <p className={styles.text}>メールアドレスを登録すると、次回のお買い物で使えるクーポンをお送りします。</p>
         <input
           className="input"
           type="email"
@@ -32,9 +32,15 @@ export default function CouponModal() {
         />
         <button
           className={`btnPrimary ${styles.submit}`}
-          onClick={() =>
-            setMessage(email ? 'ご登録ありがとうございます。クーポンはメールでお送りします。' : 'メールアドレスを入力してください。')
-          }
+          onClick={() => {
+            if (!email) {
+              setMessage('メールアドレスを入力してください。')
+              return
+            }
+            // クーポンはこのサイトでは使えない。探し回らないよう「次回以降」と明示して閉じる
+            setMessage('ご登録ありがとうございます。クーポンは次回以降のご注文でご利用いただけます。')
+            setTimeout(() => setOpen(false), 1800)
+          }}
         >
           クーポンを受け取る
         </button>

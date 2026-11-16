@@ -69,3 +69,13 @@
 .dotActive {
   background: var(--black);
 }
+
+.link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.dot {
+  cursor: pointer;
+}

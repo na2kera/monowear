@@ -10,6 +10,7 @@ import Cart from './pages/Cart.tsx'
 import Register from './pages/Register.tsx'
 import Checkout from './pages/Checkout.tsx'
 import Complete from './pages/Complete.tsx'
+import Reset from './pages/Reset.tsx'
 
 function Layout() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
         </Route>
         {/* サイズ表は別タブで開く単独ページ（ANTI-PATTERN #8） */}
         <Route path="size-chart" element={<SizeChart />} />
+        <Route path="reset" element={<Reset />} />
       </Routes>
     </>
   )

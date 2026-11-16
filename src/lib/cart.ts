@@ -17,7 +17,7 @@ const GIFT_KEY = 'monowear.giftWrap'
 export const GIFT_WRAP_PRICE = 550
 export const SHIPPING_FEE = 800
 /** 送料無料になる商品合計（税込）。購入手続き画面まで出てこない */
-export const FREE_SHIPPING_THRESHOLD = 11000
+export const FREE_SHIPPING_THRESHOLD = 15000
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -60,6 +60,15 @@ export function cartCount(): number {
 
 export function clearCart() {
   saveCart([])
+}
+
+/** 講師用：このサイトが保存した状態をすべて消す（/reset で使う） */
+export function resetAll() {
+  try {
+    for (const k of Object.keys(localStorage)) if (k.startsWith('monowear.')) localStorage.removeItem(k)
+  } catch {
+    // 何もしない
+  }
 }
 
 /** ANTI-PATTERN #13: ギフトラッピングは未設定なら「あり」扱い（最初から追加されている） */

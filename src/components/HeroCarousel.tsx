@@ -23,7 +23,8 @@ export default function HeroCarousel() {
   const slide = SLIDES[index]
 
   return (
-    <Link to={slide.to} className={styles.hero}>
+    <div className={styles.hero}>
+      <Link to={slide.to} className={styles.link}>
       {SLIDES.map((s, i) => (
         <img
           key={s.img}
@@ -37,11 +38,13 @@ export default function HeroCarousel() {
         <h2 className={styles.title}>{slide.title}</h2>
         <span className={styles.more}>VIEW MORE →</span>
       </div>
+      </Link>
+      {/* ドットは Link の外にある飾り。押せそうに見えるが何も起きない */}
       <div className={styles.dots}>
         {SLIDES.map((s, i) => (
           <span key={s.img} className={`${styles.dot} ${i === index ? styles.dotActive : ''}`} />
         ))}
       </div>
-    </Link>
+    </div>
   )
 }

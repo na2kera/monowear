@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { cartCount } from '../lib/cart'
+import { getMember } from '../lib/member'
 import { CATEGORY_LABEL, type Category } from '../data/products'
 import styles from './Header.module.css'
 
@@ -10,10 +11,11 @@ export default function Header() {
   // ANTI-PATTERN #1: カート件数は最初に表示したときに一度だけ読む。
   // ヘッダーはページを移動しても作り直されないので、リロードするまで件数が古いまま。
   const [count] = useState(() => cartCount())
+  const member = getMember()
 
   return (
     <header className={styles.header}>
-      <div className={styles.notice}>税込11,000円以上のご購入で送料無料</div>
+      <div className={styles.notice}>WINTER COLLECTION 新作アイテム入荷中</div>
       <div className={`container ${styles.inner}`}>
         <Link to="/" className={styles.logo}>
           MONOWEAR
@@ -27,7 +29,7 @@ export default function Header() {
           ))}
         </nav>
         <div className={styles.actions}>
-          <Link to="/register">ログイン</Link>
+          {member ? <span>{member.lastName} 様</span> : <Link to="/register">会員登録</Link>}
           <Link to="/cart" className={styles.cart}>
             カート
             <span className={styles.badge}>{count}</span>
